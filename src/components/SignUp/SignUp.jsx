@@ -1,7 +1,7 @@
 import React from 'react';
 import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
-import './css/SignUp.css'
+import '../../css/SignUp.css'
 
 
 
@@ -48,12 +48,12 @@ class SignUp extends Component {
   }
 
 render(){
-  const { fields: {userName, email, password , confirmPassword}, handleSubmit, pristine, submitting } = this.props;
+  let { fields: {userName, email, password , confirmPassword}, handleSubmit, pristine, submitting } = this.props;
     return (
     <div className="container">
     <div className="row">
     <div className="col-md-4 col-sm-4 col-lg-4">
-    <img src={require("./image/blog.jpg")} alt="boohoo" className="img-responsive" className="image"/>
+    <img src={require("../../image/blog.jpg")} alt="boohoo" className="img-responsive" className="image"/>
     </div>
     <div className="col-md-8 col-sm-8 col-lg-8">
     <form onSubmit={ handleSubmit(props => this.submit(props))} >

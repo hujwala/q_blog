@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { reducer as formReducer } from 'redux-form';
-import SignUp from './SignUp/components/SignUp';
+import SignUp from './components/SignUp/SignUp';
 
 const rootReducer = combineReducers({
     form: formReducer
