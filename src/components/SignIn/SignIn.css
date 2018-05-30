@@ -1,8 +1,7 @@
 
-.image {
-	margin-top: 80px; 
+.image { 
 	width: 500px;
-	height: 380px;
+	height: 500px;
 }
 
 .title {
@@ -18,6 +17,6 @@
 	margin-right: 120px;
     margin-left: 20px;
 }
-
-
-
+.mt80{
+	margin-top: 80px;
+}
