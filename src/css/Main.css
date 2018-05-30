@@ -19,3 +19,23 @@
 .mt80{
 	margin-top: 80px;
 }
+
+.blog_name {
+	margin-top: 10px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.blog_image {
+	margin-top: 60px;
+	float: right;
+	width: 100px;
+	height: 100px;
+}
+
+.blog_title {
+	margin-top: 20px;
+	font-size: 25px;
+	font-family: bold;
+	font-weight: 500px;
+}
