@@ -64,11 +64,11 @@ render(){
   let { fields: {name, email, password , confirmPassword}, handleSubmit, pristine, submitting } = this.props;
     return (
     <div className="container">
-    <div className="row">
-    <div className="col-md-4 col-sm-4 col-lg-4">
+    <div className="row mt80">
+    <div className="col-md-6 col-sm-6 col-lg-6">
     <img src={require("../../image/blog.jpg")} alt="boohoo" className="img-responsive" className="image"/>
     </div>
-    <div className="col-md-8 col-sm-8 col-lg-8">
+    <div className="col-md-6 col-sm-6 col-lg-6">
     <form onSubmit={ handleSubmit(props => this.submit(props))} >
       <div className='title'>Sign Up </div>
       <div className="form-group">
@@ -84,7 +84,7 @@ render(){
         <Field name="confirmPassword" component={renderField} label="ConfirmPassword" type="password" {...confirmPassword}/>
       </div>
       <div className="form-group">
-        <button type="submit" className="btn btn-primary button-submit">Submit</button>
+        <button type="submit" className="btn singup-button">Submit</button>&emsp;&emsp;&emsp;
         <a href="/SignIn">Already Have an account</a>
       </div>
     </form>

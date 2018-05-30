@@ -54,7 +54,7 @@ render(){
         <Field name="password" component={renderField} label="Password" type="password" {...password} className="form-control"/>
       </div>
       <div className="form-group">
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn singin-button">Submit</button>
       </div>
     </form>
     </div>

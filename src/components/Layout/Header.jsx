@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 class Header extends React.Component {
   render(){
     return (
-      <nav class="navbar navbar-light bg-light justify-content-between">
-        <Link to='/' class="navbar-brand">Q Blog</Link>
-        <form class="form-inline">
+      <nav className="navbar navbar-dark bg-dark justify-content-between">
+        <Link to='/' className="navbar-brand">Q Blog</Link>
+        <form className="form-inline">
           {/*<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">*/}
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit"> <Link to='/SignUp'>SignUp</Link></button>&emsp;
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><Link to='/SignIn'> SignIn</Link></button>
+          <Link to='/SignUp' className="btn btn-outline-success my-2 my-sm-0">SignUp</Link>&emsp;
+          <Link to='/SignIn' className="btn btn-outline-success my-2 my-sm-0"> SignIn</Link>
         </form>
       </nav>
     )

@@ -13,9 +13,14 @@
  	margin-left: 20%;
 }
 
-.button-submit{
-	margin-right: 120px;
-    margin-left: 20px;
+.singup-button{
+	background: #e6932b;
+    color: white;
+}
+
+.singup-button:hover{
+	background: #e6932b;
+    color: white;
 }
 
 
