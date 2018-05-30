@@ -1,7 +1,7 @@
 import React from 'react';
 import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
-import '../../css/SignUp.css'
+import './SignUp.css'
 
 
 

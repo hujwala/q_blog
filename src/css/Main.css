@@ -1,0 +1,21 @@
+.image { 
+	width: 500px;
+	height: 500px;
+}
+
+.title {
+	font-size: 50px;
+	text-align: center;
+}
+.form-group {
+ 	width: 60%;
+ 	margin-left: 20%;
+}
+
+.button-submit{
+	margin-right: 120px;
+    margin-left: 20px;
+}
+.mt80{
+	margin-top: 80px;
+}

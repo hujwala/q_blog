@@ -1,13 +1,15 @@
 import React from 'react';
-import SignUp from './components/SignUp/SignUp';
+import Header from './components/Layout/Header';
+import Main from './components/Layout/Main';
 
 class App extends React.Component {
   
   render() {
     return (
-      <div className="container">
-        <h3 className="jumbotron">Redux Form Validation</h3>
-        <SignUp />
+      <div>
+        <Header />
+        <Main />
+        {/*<Footer />*/}
       </div>
       
     )
