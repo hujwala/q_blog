@@ -1,6 +1,5 @@
 
-.image {
-	margin-top: 80px; 
+.image { 
 	width: 500px;
 	height: 380px;
 }
@@ -12,6 +11,16 @@
 .form-group {
  	width: 60%;
  	margin-left: 20%;
+}
+
+.singup-button{
+	background: #e6932b;
+    color: white;
+}
+
+.singup-button:hover{
+	background: #e6932b;
+    color: white;
 }
 
 

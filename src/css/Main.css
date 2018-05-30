@@ -1,0 +1,41 @@
+.image { 
+	width: 500px;
+	height: 500px;
+}
+
+.title {
+	font-size: 50px;
+	text-align: center;
+}
+.form-group {
+ 	width: 60%;
+ 	margin-left: 20%;
+}
+
+.button-submit{
+	margin-right: 120px;
+    margin-left: 20px;
+}
+.mt40{
+	margin-top: 40px;
+}
+
+.boby-baground{
+	background-color: #a8e7eaed;
+	height: 150vh;
+}
+
+.header-text{
+	text-align: center;
+    color: #197c8c;
+}
+
+.singup-button{
+	background: #e6932b;
+    color: white;
+}
+
+.singup-button:hover{
+	background: #e6932b;
+    color: white;
+}
