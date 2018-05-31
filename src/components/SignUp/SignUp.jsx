@@ -1,6 +1,9 @@
 import React from 'react';
 import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
+import {
+  withRouter
+} from 'react-router-dom'
 import './SignUp.css'
 
 
@@ -17,10 +20,10 @@ const renderField = ({ input, label, type, meta: { touched, error, warning } }) 
 
 const validate = values => {
     const errors = {}
-    if (!values.userName) {
-      errors.userName = 'Required'
-    } else if (values.userName.length < 2) {
-      errors.userName = 'Minimum be 2 characters or more'
+    if (!values.name) {
+      errors.name = 'Required'
+    } else if (values.name.length < 2) {
+      errors.name = 'Minimum be 2 characters or more'
     }
     if (!values.email) {
       errors.email = 'Required'
@@ -42,13 +45,30 @@ const validate = values => {
   }
 
 class SignUp extends Component {
+  state = {
+    toLogin: false
+  }
+
   submit = (values) => {
-    alert("submitted");
-    console.log(values);
+    const user = {
+      name: values.name,
+      email: values.email,
+      password: values.password
+    };
+    console.log(user)
+    fetch("http://localhost:8080/user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin':'*'
+      },
+      body: JSON.stringify(user)
+    })
+    .then(() => this.props.history.push('/Blog_index'))
   }
 
 render(){
-  let { fields: {userName, email, password , confirmPassword}, handleSubmit, pristine, submitting } = this.props;
+  let { fields: {name, email, password , confirmPassword}, handleSubmit, pristine, submitting } = this.props;
     return (
     <div className="container">
     <div className="row mt80">
@@ -59,7 +79,7 @@ render(){
     <form onSubmit={ handleSubmit(props => this.submit(props))} >
       <div className='title'>Sign Up </div>
       <div className="form-group">
-        <Field name="userName" component={renderField} label=" UserName" {...userName} />
+        <Field name="name" component={renderField} label=" name" {...name} />
       </div>
       <div className="form-group">
         <Field name="email" component={renderField} label="Email" {...email} />
@@ -84,7 +104,7 @@ render(){
 
 export default reduxForm({
   form: 'contact',
-  fields: ['userName', 'email', 'password' , 'confirmPassword'],
+  fields: ['name', 'email', 'password' , 'confirmPassword'],
   validate
 })(SignUp);
 
