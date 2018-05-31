@@ -1,6 +1,9 @@
 import React from 'react';
 import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
+import {
+  withRouter
+} from 'react-router-dom'
 import './SignUp.css'
 
 
@@ -42,6 +45,10 @@ const validate = values => {
   }
 
 class SignUp extends Component {
+  state = {
+    toLogin: false
+  }
+
   submit = (values) => {
     const user = {
       name: values.name,
@@ -57,7 +64,7 @@ class SignUp extends Component {
       },
       body: JSON.stringify(user)
     })
-    .then()
+    .then(() => this.props.history.push('/Blog_index'))
   }
 
 render(){
@@ -72,7 +79,7 @@ render(){
     <form onSubmit={ handleSubmit(props => this.submit(props))} >
       <div className='title'>Sign Up </div>
       <div className="form-group">
-        <Field name="userName" component={renderField} label=" name" {...name} />
+        <Field name="name" component={renderField} label=" name" {...name} />
       </div>
       <div className="form-group">
         <Field name="email" component={renderField} label="Email" {...email} />
