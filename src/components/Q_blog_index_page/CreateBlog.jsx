@@ -2,9 +2,12 @@ import React from 'react';
 import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import ButtonDropdown from '../DropdownButton'
+import ImageUploader from 'react-images-upload';
+
+
 // import { DropdownButton, MenuItem, ButtonToolbar } from 'react-bootstrap';
 
-const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
+const renderField = ({ input, label, type, select, textarea, meta: { touched, error, warning } }) => (
     <div>
       <label className="control-label">{label}</label>
       <div>
@@ -16,23 +19,40 @@ const renderField = ({ input, label, type, meta: { touched, error, warning } }) 
 
 const validate = values => {
     const errors = {}
-    if (!values.password) {
-        errors.password = 'Required'
-      } else if (values.password.length < 2) {
-        errors.password = 'Minimum be 2 characters or more'
+    if (!values.title) {
+        errors.title = 'Required'
+      }
+    if (!values.description) {
+        errors.description = 'Required'
+      }
+    if (!values.content) {
+        errors.content = 'Required'
+      }
+    if (!values.genre) {
+        errors.genre = 'Required'
+      }
+    if (!values.readingDuration) {
+        errors.readingDuration = 'Required'
       }
     return errors
   }
 
 class CreateBlog extends Component {
+
   submit = (values) => {
-    alert("submitted");
-    console.log(values);
+    const blog_data = {
+      title: values.title,
+      description: values.description,
+      content: values.content,
+      genre: values.genre,
+      readingDuration: values.readingDuration + "m"
+    };
+    console.log(blog_data);
   }
 
 
 render(){
-  let { fields: {title, description, content, genreId, image, readingDuration}, handleSubmit, pristine, submitting } = this.props;
+  let { fields: {title, description, content, genre, image, readingDuration}, handleSubmit, pristine, submitting } = this.props;
     return (
     <div className="container">
     <div className="row mt80">
@@ -47,24 +67,30 @@ render(){
       </div>
       <div className="form-group">
         <div className="btn-group">
-          <ButtonDropdown/>
-          {/*
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Select genre
-          </button>
-          <div class="dropdown-menu dropdown-menu-right">
-            <button class="dropdown-item" type="button">Action</button>
-            <button class="dropdown-item" type="button">Another action</button>
-            <button class="dropdown-item" type="button">Something else here</button>
-          </div>*/}    
+          <Field name="genre" component="select">
+            <option value="">Select genre</option>
+            <option value="Tech">Tech</option>
+            <option value="Entrepreneurship">Entrepreneurship</option>
+            <option value="Politics">Politics</option>
+            <option value="Design">Design</option>
+            <option value="Popular">Popular</option>
+          </Field>   
         </div>
       </div>
       <div className="form-group">
-      <div className='lable'>Content</div>
-        <textarea name="content" label="Content" {...content} className="form-control"/>
+        <ImageUploader
+                withIcon={true}
+                buttonText='Choose images'
+                onChange={this.onDrop}
+                imgExtension={['.jpg', '.gif', '.png', '.gif']}
+                maxFileSize={5242880}
+            />
       </div>
       <div className="form-group">
-        <Field name="readingDuration" component={renderField} label="Reading duration" {...readingDuration} className="form-control"/>
+        <Field name="content" label="Content" {...content} className="form-control" component="textarea" component={renderField}/>
+      </div>
+      <div className="form-group">
+        <Field name="readingDuration" component={renderField} type="number" label="Reading duration in munites" placeholder="in munites" {...readingDuration} className="form-control"/>
       </div>
       <div className="form-group text-center">
         <button type="submit" className="btn singin-button">Create Blog</button>
@@ -79,6 +105,6 @@ render(){
 
 export default reduxForm({
   form: 'contact',
-  fields: ['email', 'password'],
+  fields: ['title', 'description', 'content', 'genre', 'image', 'readingDuration'],
   validate
 })(CreateBlog);

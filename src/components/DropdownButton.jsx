@@ -1,33 +1,36 @@
 import React from 'react';
-import { DropdownButton, MenuItem, ButtonToolbar } from 'react-bootstrap';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-const ButtonDropdown = (props) => {
-  const BUTTONS = ['Default', 'Primary', 'Success', 'Info', 'Warning', 'Danger'];
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
 
-  function renderDropdownButton(title, i) {
-    return (
-      <DropdownButton
-        bsStyle={title.toLowerCase()}
-        title={title}
-        key={i}
-        id={`dropdown-basic-${i}`}
-      >
-        <MenuItem eventKey="1">Action</MenuItem>
-        <MenuItem eventKey="2">Another action</MenuItem>
-        <MenuItem eventKey="3" active>
-          Active Item
-        </MenuItem>
-        <MenuItem divider />
-        <MenuItem eventKey="4">Separated link</MenuItem>
-      </DropdownButton>
-    );
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      dropdownOpen: false
+    };
   }
 
-  const buttonsInstance = (
-    <ButtonToolbar>{BUTTONS.map(renderDropdownButton)}</ButtonToolbar>
-  );
+  toggle() {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    });
+  }
 
-  return(buttonsInstance);  
+  render() {
+    return (
+      <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+        <DropdownToggle caret>
+          Button Dropdown
+        </DropdownToggle>
+        <DropdownMenu>
+          <DropdownItem header>Header</DropdownItem>
+          <DropdownItem disabled>Action</DropdownItem>
+          <DropdownItem>Another Action</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem>Another Action</DropdownItem>
+        </DropdownMenu>
+      </ButtonDropdown>
+    );
+  }
 }
-
-export default ButtonDropdown;
