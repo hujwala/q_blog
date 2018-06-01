@@ -55,7 +55,6 @@ class SignUp extends Component {
       email: values.email,
       password: values.password
     };
-    console.log(user)
     fetch("http://localhost:8080/user", {
       method: "POST",
       headers: {
