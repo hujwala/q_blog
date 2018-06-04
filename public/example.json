@@ -3,12 +3,47 @@
     {
     "id": 1,
     "title": "As an Alcoholic, Your Company “Perks” are Killing Me",
-    "discription": "Dispatches from unhappy hour"
+    "discription": "Dispatches from unhappy hour",
+    "content": "discription content",
+    "genre": "Tech",
+    "created_at": "2-5-2018",
+    "duration": "5"
   },
   {
     "id": 2,
     "title": "As an Alcoholic, Your Company “Perks” are Killing Me",
-    "discription": "Dispatches from unhappy hour"
+    "discription": "Dispatches from unhappy hour",
+    "genre": "Entrepreneurship",
+    "content": "discription content",
+    "created_at": "2-5-2018",
+    "duration": "10"
+  },
+  {
+    "id": 3,
+    "title": "As an Alcoholic, Your Company “Perks” are Killing Me",
+    "discription": "Dispatches from unhappy hour",
+    "genre": "Politics",
+    "content": "discription content",
+    "created_at": "2-5-2018",
+    "duration": "10"
+  },
+  {
+    "id": 4,
+    "title": "As an Alcoholic, Your Company “Perks” are Killing Me",
+    "discription": "Dispatches from unhappy hour",
+    "genre": "Design",
+    "content": "discription content",
+    "created_at": "2-5-2018",
+    "duration": "10"
+  },
+  {
+    "id": 5,
+    "title": "As an Alcoholic, Your Company “Perks” are Killing Me",
+    "discription": "Dispatches from unhappy hour",
+    "genre": "Popular",
+    "content": "discription content",
+    "created_at": "2-5-2018",
+    "duration": "10"
   }
 ]
 }
