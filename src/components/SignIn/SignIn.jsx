@@ -31,9 +31,26 @@ const validate = values => {
   }
 
 class SignIn extends Component {
+  state = {
+    toLogin: false
+  }
+
   submit = (values) => {
-    alert("submitted");
-    console.log(values);
+    const user = {
+      email: values.email,
+      password: values.password
+    };
+    console.log(user)
+    fetch("http://localhost:8080/getUser", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin':'*'
+      },
+      body: JSON.stringify(user)
+    })
+    .then((responce) => console.log(responce)
+      )
   }
 
 render(){

@@ -44,7 +44,7 @@
 
 .boby-baground{
 	background-color: #a8e7eaed;
-	height: 150vh;
+	min-height: 100vh;
 }
 
 .header-text{
