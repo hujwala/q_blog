@@ -1,14 +1,26 @@
 import React from 'react';
 import {Component} from 'react';
 import { Link } from 'react-router-dom';
-
+import { blogDetails } from '../../actions';
+import { connect } from 'react-redux';
+import { blogUpdate } from '../../actions';
+import '../../css/Main.css'
 class Header extends React.Component {
+  filterList (event) {
+    if(event.target.value.toString() !== ""){
+      this.props.blogUpdate(event.target.value)
+    } else {
+      this.props.blogDetails()
+    }
+
+  }
+
   render(){
     return (
       <nav className="navbar navbar-dark bg-dark justify-content-between">
         <Link to='/' className="navbar-brand">Q Blog</Link>
         <form className="form-inline">
-          {/*<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">*/}
+          <input className="form-control mr-sm-2" type="text" placeholder="Search"  onChange={e => this.filterList(e)}></input> 
           <Link to='/SignUp' className="btn btn-outline-success my-2 my-sm-0">SignUp</Link>&emsp;
           <Link to='/SignIn' className="btn btn-outline-success my-2 my-sm-0"> SignIn</Link>
         </form>
@@ -17,4 +29,8 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+  const { details } = state.api;
+  return { details };
+}
+export default connect(mapStateToProps, { blogDetails, blogUpdate }) (Header);

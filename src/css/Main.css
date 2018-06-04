@@ -61,3 +61,8 @@
 	background: #e6932b;
     color: white;
 }
+
+/*search bar css*/
+.form-control {
+	border-radius: 40px;
+}
