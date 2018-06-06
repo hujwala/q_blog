@@ -4,7 +4,7 @@ import { blogDetails } from '../../actions';
 import { connect } from 'react-redux';
 import { blogUpdate } from '../../actions';
 
-class Blog_index extends Component {
+class BlogIndex extends Component {
   
   componentWillMount() {
     this.props.blogDetails()
@@ -46,4 +46,4 @@ const mapStateToProps = (state) => {
   const { details } = state.api;
   return { details };
 }
-export default connect(mapStateToProps, { blogDetails }) (Blog_index);
+export default connect(mapStateToProps, { blogDetails }) (BlogIndex);

@@ -59,7 +59,7 @@ class SignUp extends Component {
       },
       body: JSON.stringify(user)
     })
-    .then(response => this.props.history.push('/Blog_index'))
+    .then(response => this.props.history.push('/blog_index'))
          
   }
 
@@ -88,7 +88,7 @@ render(){
       </div>
       <div className="form-group">
         <button type="submit" className="btn singup-button">Submit</button>&emsp;&emsp;&emsp;
-        <a href="/SignIn">Already Have an account</a>
+        <a href="/sign_in">Already Have an account</a>
       </div>
     </form>
     </div>

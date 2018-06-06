@@ -23,8 +23,8 @@ class Header extends React.Component {
         <input className="search" type="search" placeholder="Search" onChange={e => this.filterList(e)} />
         </div>
         <form className="form-inline">
-          <Link to='/SignUp' className="btn btn-outline-success my-2 my-sm-0">SignUp</Link>&emsp;
-          <Link to='/SignIn' className="btn btn-outline-success my-2 my-sm-0"> SignIn</Link>
+          <Link to='/sign_up' className="btn btn-outline-success my-2 my-sm-0">SignUp</Link>&emsp;
+          <Link to='/sign_in' className="btn btn-outline-success my-2 my-sm-0"> SignIn</Link>
         </form>
       </nav>
     )
