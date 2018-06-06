@@ -14,7 +14,7 @@ class Home extends React.Component {
 			    	<h1 className="header-text">Publish your passions, your way</h1>
 						<h3 className="header-text">Create a unique and beautiful blog.</h3>
 						<div className="form-group text-center">
-			        <Link to='/SignUp' className="btn singup-button">Create your blog</Link>
+			        <Link to='/sign_up' className="btn singup-button">Create your blog</Link>
 			      </div>
 			    </div>
 		    </div>
