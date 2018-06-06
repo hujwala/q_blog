@@ -19,8 +19,10 @@ class Header extends React.Component {
     return (
       <nav className="navbar navbar-dark bg-dark justify-content-between">
         <Link to='/' className="navbar-brand">Q Blog</Link>
+        <div>
+        <input className="search" type="search" placeholder="Search" onChange={e => this.filterList(e)} />
+        </div>
         <form className="form-inline">
-          <input className="form-control mr-sm-2" type="text" placeholder="Search"  onChange={e => this.filterList(e)}></input> 
           <Link to='/SignUp' className="btn btn-outline-success my-2 my-sm-0">SignUp</Link>&emsp;
           <Link to='/SignIn' className="btn btn-outline-success my-2 my-sm-0"> SignIn</Link>
         </form>
