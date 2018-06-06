@@ -2,6 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import './SignIn.css'
+import { bake_cookie, read_cookie, delete_cookie } from "sfcookies";
 
 
 
@@ -37,11 +38,10 @@ class SignIn extends Component {
 
   submit = (values) => {
     const user = {
-      email: values.email,
-      password: values.password
+      userName: values.email,
+      role: values.password
     };
-    console.log(user)
-    fetch("http://localhost:8080/getUser", {
+    fetch("http://192.168.2.115:8080/token", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -49,8 +49,16 @@ class SignIn extends Component {
       },
       body: JSON.stringify(user)
     })
-    .then((responce) => console.log(responce)
-      )
+    .then(function(response) {
+      return response.json();
+    })
+    .then(response =>{ 
+        if (response.statusCode === "200") {
+          bake_cookie("auth_token", response.authToken);
+          this.props.history.push('/Blog_index')
+        }
+      })
+    
   }
 
 render(){

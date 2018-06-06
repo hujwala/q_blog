@@ -45,17 +45,13 @@ const validate = values => {
   }
 
 class SignUp extends Component {
-  state = {
-    toLogin: false
-  }
-
   submit = (values) => {
     const user = {
       name: values.name,
       email: values.email,
       password: values.password
     };
-    fetch("http://localhost:8080/user", {
+    fetch("http://192.168.2.115:8080/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,7 +59,8 @@ class SignUp extends Component {
       },
       body: JSON.stringify(user)
     })
-    .then(() => this.props.history.push('/Blog_index'))
+    .then(response => this.props.history.push('/Blog_index'))
+         
   }
 
 render(){

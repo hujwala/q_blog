@@ -25,10 +25,10 @@
 }
 
 .blog_image {
-	margin-top: 60px;
+	margin-top: 40px;
 	float: right;
 	width: 100px;
-	height: 100px;
+	height: 110px;
 }
 
 .blog_title {
@@ -60,4 +60,19 @@
 .singup-button:hover{
 	background: #e6932b;
     color: white;
+}
+
+/*search bar css*/
+
+.search {
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: 800px;
+    width: 75px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.search:focus {
+    width: 200px;
 }
