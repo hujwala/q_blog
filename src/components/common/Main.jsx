@@ -9,7 +9,7 @@ import CreateBlog from '../Blog/CreateBlog'
 import PageNotFound from './PageNotFound.jsx';
 import { bake_cookie, read_cookie } from "sfcookies";
 
-const Private = ({ component: Component, ...rest }) => (
+const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
     read_cookie("auth_token").length != 0 ? (
       <Component {...props}/>
@@ -30,8 +30,8 @@ class Main extends React.Component {
         <Route exact path='/' component={Home}/>
         <Route exact path='/sign_up' component={SignUp} />
         <Route exact path='/sign_in' component={SignIn} />
-        <Private exact path="/Blog_index" component={index} />
-        <Private exact path='/create_blog'  component={CreateBlog} />
+        <PrivateRoute exact path="/Blog_index" component={index} />
+        <PrivateRoute exact path='/create_blog'  component={CreateBlog} />
         <Route path="*" component={PageNotFound} />
       </Switch>
     )
