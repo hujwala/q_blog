@@ -6,6 +6,7 @@ import { bake_cookie, read_cookie, delete_cookie } from "sfcookies";
 
 
 
+
 const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
     <div>
       <label className="control-label">{label}</label>
@@ -41,7 +42,7 @@ class SignIn extends Component {
       userName: values.email,
       role: values.password
     };
-    fetch("http://192.168.2.115:8080/token", {
+    fetch("http://localhost:8080/token", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +56,7 @@ class SignIn extends Component {
     .then(response =>{ 
         if (response.statusCode === "200") {
           bake_cookie("auth_token", response.authToken);
-          this.props.history.push('/blog_index')
+          this.props.history.push('/Blog_index')
         }
       })
     
