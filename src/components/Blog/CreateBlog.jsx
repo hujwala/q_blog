@@ -3,6 +3,8 @@ import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import ButtonDropdown from '../DropdownButton'
 import ImageUploader from 'react-images-upload';
+import { loginStatus } from '../../actions';
+import { connect } from 'react-redux';
 
 
 // import { DropdownButton, MenuItem, ButtonToolbar } from 'react-bootstrap';
@@ -38,7 +40,6 @@ const validate = values => {
   }
 
 class CreateBlog extends Component {
-
   submit = (values) => {
     const blog_data = {
       title: values.title,
@@ -99,10 +100,9 @@ render(){
     </div>
     </div>
     </div>
-  )
+  ) 
   }
 }
-
 export default reduxForm({
   form: 'contact',
   fields: ['title', 'description', 'content', 'genre', 'image', 'readingDuration'],
