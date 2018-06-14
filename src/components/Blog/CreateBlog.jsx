@@ -3,6 +3,8 @@ import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import ButtonDropdown from '../DropdownButton'
 import ImageUploader from 'react-images-upload';
+import { loginStatus } from '../../actions';
+import { connect } from 'react-redux';
 
 const renderField = ({ input, label, type, select, textarea, meta: { touched, error, warning } }) => (
     <div>
@@ -134,10 +136,9 @@ render(){
         </div>
       </div>
     </div>
-  )
+  ) 
   }
 }
-
 export default reduxForm({
   form: 'contact',
   fields: ['title', 'description', 'content', 'genre', 'image', 'readingDuration'],
