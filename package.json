@@ -7,6 +7,8 @@
     "material-ui": "^0.20.1",
     "material-ui-search-bar": "^0.4.2",
     "react": "^16.4.0",
+    "react-alert": "^4.0.4",
+    "react-alert-template-basic": "^1.0.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.0",
     "react-images-upload": "^1.1.99",
