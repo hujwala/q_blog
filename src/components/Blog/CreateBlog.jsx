@@ -65,21 +65,21 @@ class CreateBlog extends Component {
 
   submit = (values) => {
     var base64Img = require('base64-img');
-    // base64Img.requestBase64(this.state.pictures[0]["name"], function(err, res, body) {
-    //    // this.state.images: body
-    //    export const ThemeContext = React.createContext(
-    //     themes.dark // default value
-    //   );
-    // })
+    var images = this.state.pictures;
+    var base64Images = []
+    images.map(function(images, index){
+      base64Img.requestBase64(images.name, function(err, res, body) {
+        base64Images.push(body)
+      })
+    })
     const blog_data = {
       title: values.title,
       description: values.description,
       content: values.content,
       genre: values.genre,
-      readingDuration: values.readingDuration + "m"
-      // blogImage: this.state.images
+      readingDuration: values.readingDuration + "m",
+      blogImage: base64Images
     };
-    // console.log(themes.dark);
     this.props.history.push('/blog_index'); 
   }
 
