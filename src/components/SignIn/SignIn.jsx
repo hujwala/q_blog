@@ -1,10 +1,8 @@
-import React from 'react';
-import {Component} from 'react';
+import React, {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import './SignIn.css'
 import { bake_cookie, read_cookie, delete_cookie } from "sfcookies";
-
-
+import { withAlert } from 'react-alert'
 
 
 const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
@@ -57,7 +55,11 @@ class SignIn extends Component {
         if (response.statusCode === "200") {
           bake_cookie("auth_token", response.authToken);
           this.props.history.push('/Blog_index')
+          this.props.alert.show(response.message)
+        }else{
+          this.props.alert.show('Invalid email or password')
         }
+        console.log(response)
       })
     
   }
@@ -90,8 +92,8 @@ render(){
   }
 }
 
-export default reduxForm({
+export default withAlert(reduxForm({
   form: 'contact',
   fields: ['email', 'password'],
   validate
-})(SignIn);
+})(SignIn));

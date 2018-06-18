@@ -1,10 +1,9 @@
 import React from 'react';
 import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
-import {
-  withRouter
-} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import './SignUp.css'
+import { withAlert } from 'react-alert'
 
 
 
@@ -51,7 +50,7 @@ class SignUp extends Component {
       email: values.email,
       password: values.password
     };
-    fetch("http://localhost:8080/user", {
+    fetch("http://192.168.2.115:8080/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,6 +59,7 @@ class SignUp extends Component {
       body: JSON.stringify(user)
     })
     .then(response => this.props.history.push('/blog_index'))
+    this.props.alert.show('Signed up sucessfull!!')
          
   }
 
@@ -98,9 +98,9 @@ render(){
   }
 }
 
-export default reduxForm({
+export default withAlert(reduxForm({
   form: 'contact',
   fields: ['name', 'email', 'password' , 'confirmPassword'],
   validate
-})(SignUp);
+})(SignUp));
 
