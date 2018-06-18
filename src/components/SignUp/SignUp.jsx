@@ -1,10 +1,9 @@
 import React from 'react';
 import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
-import {
-  withRouter
-} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import './SignUp.css'
+import { withAlert } from 'react-alert'
 
 
 
@@ -51,7 +50,7 @@ class SignUp extends Component {
       email: values.email,
       password: values.password
     };
-    fetch("http://localhost:8080/user", {
+    fetch("http://192.168.2.115:8080/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,6 +59,7 @@ class SignUp extends Component {
       body: JSON.stringify(user)
     })
     .then(response => this.props.history.push('/blog_index'))
+    this.props.alert.show('Signed up sucessfull!!')
          
   }
 
@@ -72,22 +72,22 @@ render(){
     <img src={require("../../image/blog.jpg")} alt="boohoo" className="img-responsive" className="image"/>
     </div>
     <div className="col-md-6 col-sm-6 col-lg-6">
-    <form onSubmit={ handleSubmit(props => this.submit(props))} >
+    <form className="signup" id="signup" onSubmit={ handleSubmit(props => this.submit(props))} >
       <div className='title'>Sign Up </div>
-      <div className="form-group">
-        <Field name="name" component={renderField} label=" name" {...name} />
+      <div className="form-group" id="username">
+        <Field  name="name" component={renderField} label=" name" {...name} />
       </div>
-      <div className="form-group">
+      <div className="form-group" id="email">
         <Field name="email" component={renderField} label="Email" {...email} />
       </div>
-      <div className="form-group">
+      <div className="form-group" id="password">
         <Field name="password" component={renderField} label="Password" type="password" {...password}/>
       </div>
-      <div className="form-group">
+      <div className="form-group" id="confirmPassword">
         <Field name="confirmPassword" component={renderField} label="ConfirmPassword" type="password" {...confirmPassword}/>
       </div>
       <div className="form-group">
-        <button type="submit" className="btn singup-button">Submit</button>&emsp;&emsp;&emsp;
+        <button  type="submit" className="btn singup-button">Submit</button>&emsp;&emsp;&emsp;
         <a href="/sign_in">Already Have an account</a>
       </div>
     </form>
@@ -98,9 +98,9 @@ render(){
   }
 }
 
-export default reduxForm({
+export default withAlert(reduxForm({
   form: 'contact',
   fields: ['name', 'email', 'password' , 'confirmPassword'],
   validate
-})(SignUp);
+})(SignUp));
 
