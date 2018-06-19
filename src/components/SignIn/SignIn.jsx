@@ -31,9 +31,6 @@ const validate = values => {
   }
 
 class SignIn extends Component {
-  state = {
-    toLogin: false
-  }
 
   submit = (values) => {
     const user = {
@@ -75,10 +72,10 @@ render(){
     <div className="col-md-6 col-sm-6 col-lg-6">
     <form className='login' onSubmit={ handleSubmit(props => this.submit(props))} >
       <div className='title'>Sign In </div>
-      <div className="form-group">
+      <div className="form-group" id="email">
         <Field name="email" component={renderField} label="Email" {...email} className="form-control"/>
       </div>
-      <div className="form-group">
+      <div className="form-group" id="password">
         <Field name="password" component={renderField} label="Password" type="password" {...password} className="form-control"/>
       </div>
       <div className="form-group">
