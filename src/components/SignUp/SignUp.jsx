@@ -50,7 +50,7 @@ class SignUp extends Component {
       email: values.email,
       password: values.password
     };
-    fetch("http://192.168.2.115:8080/user", {
+    fetch("http://localhost:8080/userSignup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -31,7 +31,7 @@ describe("SignIn", () => {
     )
   })
   it('should have form', () => {
-    // expect(subject.find('form').hasClass('login')).toBe(true)
+    expect(subject.find('form').hasClass('loginForm')).toBe(true)
     expect(subject.find('Field').length).toEqual(2);
   })
 

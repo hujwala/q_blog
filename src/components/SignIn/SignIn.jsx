@@ -70,7 +70,7 @@ render(){
     <img src={require("../../image/blog.jpg")} alt="boohoo" className="img-responsive" className="image"/>
     </div>
     <div className="col-md-6 col-sm-6 col-lg-6">
-    <form className='login' onSubmit={ handleSubmit(props => this.submit(props))} >
+    <form onSubmit={ handleSubmit(props => this.submit(props))} className='loginForm'>
       <div className='title'>Sign In </div>
       <div className="form-group" id="email">
         <Field name="email" component={renderField} label="Email" {...email} className="form-control"/>
