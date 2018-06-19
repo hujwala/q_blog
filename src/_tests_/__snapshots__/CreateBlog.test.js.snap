@@ -1,0 +1,1619 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateBlog calls on submit 1`] = `
+<form
+  className="blogForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="title"
+  >
+    Create Blog 
+  </div>
+  <div
+    className="form-group"
+    id="title"
+  >
+    <Field
+      className="form-control"
+      component={[Function]}
+      label="Title"
+      name="title"
+    >
+      <Connect(ConnectedField)
+        _reduxForm={
+          Object {
+            "anyTouched": false,
+            "array": Object {
+              "insert": [Function],
+              "move": [Function],
+              "pop": [Function],
+              "push": [Function],
+              "remove": [Function],
+              "removeAll": [Function],
+              "shift": [Function],
+              "splice": [Function],
+              "swap": [Function],
+              "unshift": [Function],
+            },
+            "arrayInsert": [Function],
+            "arrayMove": [Function],
+            "arrayPop": [Function],
+            "arrayPush": [Function],
+            "arrayRemove": [Function],
+            "arrayRemoveAll": [Function],
+            "arrayShift": [Function],
+            "arraySplice": [Function],
+            "arraySwap": [Function],
+            "arrayUnshift": [Function],
+            "asyncErrors": undefined,
+            "asyncValidate": [Function],
+            "asyncValidating": false,
+            "autofill": [Function],
+            "blur": [Function],
+            "change": [Function],
+            "clearAsyncError": [Function],
+            "clearFields": [Function],
+            "clearSubmit": [Function],
+            "clearSubmitErrors": [Function],
+            "destroy": [Function],
+            "destroyOnUnmount": true,
+            "dirty": false,
+            "dispatch": [Function],
+            "enableReinitialize": false,
+            "error": undefined,
+            "fields": Array [
+              "title",
+              "description",
+              "content",
+              "genre",
+              "image",
+              "readingDuration",
+            ],
+            "focus": [Function],
+            "forceUnregisterOnUnmount": false,
+            "form": "contact",
+            "getFormState": [Function],
+            "getValues": [Function],
+            "initialValues": undefined,
+            "initialize": [Function],
+            "initialized": false,
+            "invalid": false,
+            "keepDirtyOnReinitialize": false,
+            "persistentSubmitErrors": false,
+            "pristine": true,
+            "pure": true,
+            "register": [Function],
+            "registerField": [Function],
+            "registerInnerOnSubmit": [Function],
+            "registeredFields": undefined,
+            "reset": [Function],
+            "resetSection": [Function],
+            "sectionPrefix": undefined,
+            "setSubmitFailed": [Function],
+            "setSubmitSucceeded": [Function],
+            "shouldAsyncValidate": [Function],
+            "shouldError": [Function],
+            "shouldValidate": [Function],
+            "shouldWarn": [Function],
+            "startAsyncValidation": [Function],
+            "startSubmit": [Function],
+            "stopAsyncValidation": [Function],
+            "stopSubmit": [Function],
+            "submit": [Function],
+            "submitFailed": false,
+            "submitSucceeded": false,
+            "submitting": false,
+            "syncErrors": Object {},
+            "syncWarnings": Object {},
+            "touch": [Function],
+            "touchOnBlur": true,
+            "touchOnChange": false,
+            "triggerSubmit": undefined,
+            "unregister": [Function],
+            "unregisterField": [Function],
+            "untouch": [Function],
+            "updateSyncErrors": [Function],
+            "updateSyncWarnings": [Function],
+            "updateUnregisteredFields": false,
+            "valid": true,
+            "validExceptSubmit": true,
+            "validate": [Function],
+            "values": Object {},
+            "warning": undefined,
+          }
+        }
+        className="form-control"
+        component={[Function]}
+        label="Title"
+        name="title"
+        normalize={[Function]}
+      >
+        <ConnectedField
+          _reduxForm={
+            Object {
+              "anyTouched": false,
+              "array": Object {
+                "insert": [Function],
+                "move": [Function],
+                "pop": [Function],
+                "push": [Function],
+                "remove": [Function],
+                "removeAll": [Function],
+                "shift": [Function],
+                "splice": [Function],
+                "swap": [Function],
+                "unshift": [Function],
+              },
+              "arrayInsert": [Function],
+              "arrayMove": [Function],
+              "arrayPop": [Function],
+              "arrayPush": [Function],
+              "arrayRemove": [Function],
+              "arrayRemoveAll": [Function],
+              "arrayShift": [Function],
+              "arraySplice": [Function],
+              "arraySwap": [Function],
+              "arrayUnshift": [Function],
+              "asyncErrors": undefined,
+              "asyncValidate": [Function],
+              "asyncValidating": false,
+              "autofill": [Function],
+              "blur": [Function],
+              "change": [Function],
+              "clearAsyncError": [Function],
+              "clearFields": [Function],
+              "clearSubmit": [Function],
+              "clearSubmitErrors": [Function],
+              "destroy": [Function],
+              "destroyOnUnmount": true,
+              "dirty": false,
+              "dispatch": [Function],
+              "enableReinitialize": false,
+              "error": undefined,
+              "fields": Array [
+                "title",
+                "description",
+                "content",
+                "genre",
+                "image",
+                "readingDuration",
+              ],
+              "focus": [Function],
+              "forceUnregisterOnUnmount": false,
+              "form": "contact",
+              "getFormState": [Function],
+              "getValues": [Function],
+              "initialValues": undefined,
+              "initialize": [Function],
+              "initialized": false,
+              "invalid": false,
+              "keepDirtyOnReinitialize": false,
+              "persistentSubmitErrors": false,
+              "pristine": true,
+              "pure": true,
+              "register": [Function],
+              "registerField": [Function],
+              "registerInnerOnSubmit": [Function],
+              "registeredFields": undefined,
+              "reset": [Function],
+              "resetSection": [Function],
+              "sectionPrefix": undefined,
+              "setSubmitFailed": [Function],
+              "setSubmitSucceeded": [Function],
+              "shouldAsyncValidate": [Function],
+              "shouldError": [Function],
+              "shouldValidate": [Function],
+              "shouldWarn": [Function],
+              "startAsyncValidation": [Function],
+              "startSubmit": [Function],
+              "stopAsyncValidation": [Function],
+              "stopSubmit": [Function],
+              "submit": [Function],
+              "submitFailed": false,
+              "submitSucceeded": false,
+              "submitting": false,
+              "syncErrors": Object {},
+              "syncWarnings": Object {},
+              "touch": [Function],
+              "touchOnBlur": true,
+              "touchOnChange": false,
+              "triggerSubmit": undefined,
+              "unregister": [Function],
+              "unregisterField": [Function],
+              "untouch": [Function],
+              "updateSyncErrors": [Function],
+              "updateSyncWarnings": [Function],
+              "updateUnregisteredFields": false,
+              "valid": true,
+              "validExceptSubmit": true,
+              "validate": [Function],
+              "values": Object {},
+              "warning": undefined,
+            }
+          }
+          asyncValidating={false}
+          className="form-control"
+          component={[Function]}
+          dirty={false}
+          dispatch={[Function]}
+          label="Title"
+          name="title"
+          normalize={[Function]}
+          pristine={true}
+          syncError="Required"
+        >
+          <renderField
+            className="form-control"
+            input={
+              Object {
+                "name": "title",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "onDragStart": [Function],
+                "onDrop": [Function],
+                "onFocus": [Function],
+                "value": "",
+              }
+            }
+            label="Title"
+            meta={
+              Object {
+                "active": false,
+                "asyncValidating": false,
+                "autofilled": false,
+                "dirty": false,
+                "dispatch": [Function],
+                "error": "Required",
+                "form": "contact",
+                "initial": undefined,
+                "invalid": true,
+                "pristine": true,
+                "submitFailed": false,
+                "submitting": false,
+                "touched": false,
+                "valid": false,
+                "visited": false,
+                "warning": undefined,
+              }
+            }
+          >
+            <div>
+              <label
+                className="control-label"
+              >
+                Title
+              </label>
+              <div>
+                <input
+                  className="form-control"
+                  name="title"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onDragStart={[Function]}
+                  onDrop={[Function]}
+                  onFocus={[Function]}
+                  placeholder="Title"
+                  value=""
+                />
+              </div>
+            </div>
+          </renderField>
+        </ConnectedField>
+      </Connect(ConnectedField)>
+    </Field>
+  </div>
+  <div
+    className="form-group"
+    id="description"
+  >
+    <Field
+      className="form-control"
+      component={[Function]}
+      label="Description"
+      name="description"
+    >
+      <Connect(ConnectedField)
+        _reduxForm={
+          Object {
+            "anyTouched": false,
+            "array": Object {
+              "insert": [Function],
+              "move": [Function],
+              "pop": [Function],
+              "push": [Function],
+              "remove": [Function],
+              "removeAll": [Function],
+              "shift": [Function],
+              "splice": [Function],
+              "swap": [Function],
+              "unshift": [Function],
+            },
+            "arrayInsert": [Function],
+            "arrayMove": [Function],
+            "arrayPop": [Function],
+            "arrayPush": [Function],
+            "arrayRemove": [Function],
+            "arrayRemoveAll": [Function],
+            "arrayShift": [Function],
+            "arraySplice": [Function],
+            "arraySwap": [Function],
+            "arrayUnshift": [Function],
+            "asyncErrors": undefined,
+            "asyncValidate": [Function],
+            "asyncValidating": false,
+            "autofill": [Function],
+            "blur": [Function],
+            "change": [Function],
+            "clearAsyncError": [Function],
+            "clearFields": [Function],
+            "clearSubmit": [Function],
+            "clearSubmitErrors": [Function],
+            "destroy": [Function],
+            "destroyOnUnmount": true,
+            "dirty": false,
+            "dispatch": [Function],
+            "enableReinitialize": false,
+            "error": undefined,
+            "fields": Array [
+              "title",
+              "description",
+              "content",
+              "genre",
+              "image",
+              "readingDuration",
+            ],
+            "focus": [Function],
+            "forceUnregisterOnUnmount": false,
+            "form": "contact",
+            "getFormState": [Function],
+            "getValues": [Function],
+            "initialValues": undefined,
+            "initialize": [Function],
+            "initialized": false,
+            "invalid": false,
+            "keepDirtyOnReinitialize": false,
+            "persistentSubmitErrors": false,
+            "pristine": true,
+            "pure": true,
+            "register": [Function],
+            "registerField": [Function],
+            "registerInnerOnSubmit": [Function],
+            "registeredFields": undefined,
+            "reset": [Function],
+            "resetSection": [Function],
+            "sectionPrefix": undefined,
+            "setSubmitFailed": [Function],
+            "setSubmitSucceeded": [Function],
+            "shouldAsyncValidate": [Function],
+            "shouldError": [Function],
+            "shouldValidate": [Function],
+            "shouldWarn": [Function],
+            "startAsyncValidation": [Function],
+            "startSubmit": [Function],
+            "stopAsyncValidation": [Function],
+            "stopSubmit": [Function],
+            "submit": [Function],
+            "submitFailed": false,
+            "submitSucceeded": false,
+            "submitting": false,
+            "syncErrors": Object {},
+            "syncWarnings": Object {},
+            "touch": [Function],
+            "touchOnBlur": true,
+            "touchOnChange": false,
+            "triggerSubmit": undefined,
+            "unregister": [Function],
+            "unregisterField": [Function],
+            "untouch": [Function],
+            "updateSyncErrors": [Function],
+            "updateSyncWarnings": [Function],
+            "updateUnregisteredFields": false,
+            "valid": true,
+            "validExceptSubmit": true,
+            "validate": [Function],
+            "values": Object {},
+            "warning": undefined,
+          }
+        }
+        className="form-control"
+        component={[Function]}
+        label="Description"
+        name="description"
+        normalize={[Function]}
+      >
+        <ConnectedField
+          _reduxForm={
+            Object {
+              "anyTouched": false,
+              "array": Object {
+                "insert": [Function],
+                "move": [Function],
+                "pop": [Function],
+                "push": [Function],
+                "remove": [Function],
+                "removeAll": [Function],
+                "shift": [Function],
+                "splice": [Function],
+                "swap": [Function],
+                "unshift": [Function],
+              },
+              "arrayInsert": [Function],
+              "arrayMove": [Function],
+              "arrayPop": [Function],
+              "arrayPush": [Function],
+              "arrayRemove": [Function],
+              "arrayRemoveAll": [Function],
+              "arrayShift": [Function],
+              "arraySplice": [Function],
+              "arraySwap": [Function],
+              "arrayUnshift": [Function],
+              "asyncErrors": undefined,
+              "asyncValidate": [Function],
+              "asyncValidating": false,
+              "autofill": [Function],
+              "blur": [Function],
+              "change": [Function],
+              "clearAsyncError": [Function],
+              "clearFields": [Function],
+              "clearSubmit": [Function],
+              "clearSubmitErrors": [Function],
+              "destroy": [Function],
+              "destroyOnUnmount": true,
+              "dirty": false,
+              "dispatch": [Function],
+              "enableReinitialize": false,
+              "error": undefined,
+              "fields": Array [
+                "title",
+                "description",
+                "content",
+                "genre",
+                "image",
+                "readingDuration",
+              ],
+              "focus": [Function],
+              "forceUnregisterOnUnmount": false,
+              "form": "contact",
+              "getFormState": [Function],
+              "getValues": [Function],
+              "initialValues": undefined,
+              "initialize": [Function],
+              "initialized": false,
+              "invalid": false,
+              "keepDirtyOnReinitialize": false,
+              "persistentSubmitErrors": false,
+              "pristine": true,
+              "pure": true,
+              "register": [Function],
+              "registerField": [Function],
+              "registerInnerOnSubmit": [Function],
+              "registeredFields": undefined,
+              "reset": [Function],
+              "resetSection": [Function],
+              "sectionPrefix": undefined,
+              "setSubmitFailed": [Function],
+              "setSubmitSucceeded": [Function],
+              "shouldAsyncValidate": [Function],
+              "shouldError": [Function],
+              "shouldValidate": [Function],
+              "shouldWarn": [Function],
+              "startAsyncValidation": [Function],
+              "startSubmit": [Function],
+              "stopAsyncValidation": [Function],
+              "stopSubmit": [Function],
+              "submit": [Function],
+              "submitFailed": false,
+              "submitSucceeded": false,
+              "submitting": false,
+              "syncErrors": Object {},
+              "syncWarnings": Object {},
+              "touch": [Function],
+              "touchOnBlur": true,
+              "touchOnChange": false,
+              "triggerSubmit": undefined,
+              "unregister": [Function],
+              "unregisterField": [Function],
+              "untouch": [Function],
+              "updateSyncErrors": [Function],
+              "updateSyncWarnings": [Function],
+              "updateUnregisteredFields": false,
+              "valid": true,
+              "validExceptSubmit": true,
+              "validate": [Function],
+              "values": Object {},
+              "warning": undefined,
+            }
+          }
+          asyncValidating={false}
+          className="form-control"
+          component={[Function]}
+          dirty={false}
+          dispatch={[Function]}
+          label="Description"
+          name="description"
+          normalize={[Function]}
+          pristine={true}
+          syncError="Required"
+        >
+          <renderField
+            className="form-control"
+            input={
+              Object {
+                "name": "description",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "onDragStart": [Function],
+                "onDrop": [Function],
+                "onFocus": [Function],
+                "value": "",
+              }
+            }
+            label="Description"
+            meta={
+              Object {
+                "active": false,
+                "asyncValidating": false,
+                "autofilled": false,
+                "dirty": false,
+                "dispatch": [Function],
+                "error": "Required",
+                "form": "contact",
+                "initial": undefined,
+                "invalid": true,
+                "pristine": true,
+                "submitFailed": false,
+                "submitting": false,
+                "touched": false,
+                "valid": false,
+                "visited": false,
+                "warning": undefined,
+              }
+            }
+          >
+            <div>
+              <label
+                className="control-label"
+              >
+                Description
+              </label>
+              <div>
+                <input
+                  className="form-control"
+                  name="description"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onDragStart={[Function]}
+                  onDrop={[Function]}
+                  onFocus={[Function]}
+                  placeholder="Description"
+                  value=""
+                />
+              </div>
+            </div>
+          </renderField>
+        </ConnectedField>
+      </Connect(ConnectedField)>
+    </Field>
+  </div>
+  <div
+    className="form-group"
+    id="genre"
+  >
+    <div
+      className="btn-group"
+    >
+      <Field
+        component="select"
+        name="genre"
+      >
+        <Connect(ConnectedField)
+          _reduxForm={
+            Object {
+              "anyTouched": false,
+              "array": Object {
+                "insert": [Function],
+                "move": [Function],
+                "pop": [Function],
+                "push": [Function],
+                "remove": [Function],
+                "removeAll": [Function],
+                "shift": [Function],
+                "splice": [Function],
+                "swap": [Function],
+                "unshift": [Function],
+              },
+              "arrayInsert": [Function],
+              "arrayMove": [Function],
+              "arrayPop": [Function],
+              "arrayPush": [Function],
+              "arrayRemove": [Function],
+              "arrayRemoveAll": [Function],
+              "arrayShift": [Function],
+              "arraySplice": [Function],
+              "arraySwap": [Function],
+              "arrayUnshift": [Function],
+              "asyncErrors": undefined,
+              "asyncValidate": [Function],
+              "asyncValidating": false,
+              "autofill": [Function],
+              "blur": [Function],
+              "change": [Function],
+              "clearAsyncError": [Function],
+              "clearFields": [Function],
+              "clearSubmit": [Function],
+              "clearSubmitErrors": [Function],
+              "destroy": [Function],
+              "destroyOnUnmount": true,
+              "dirty": false,
+              "dispatch": [Function],
+              "enableReinitialize": false,
+              "error": undefined,
+              "fields": Array [
+                "title",
+                "description",
+                "content",
+                "genre",
+                "image",
+                "readingDuration",
+              ],
+              "focus": [Function],
+              "forceUnregisterOnUnmount": false,
+              "form": "contact",
+              "getFormState": [Function],
+              "getValues": [Function],
+              "initialValues": undefined,
+              "initialize": [Function],
+              "initialized": false,
+              "invalid": true,
+              "keepDirtyOnReinitialize": false,
+              "persistentSubmitErrors": false,
+              "pristine": true,
+              "pure": true,
+              "register": [Function],
+              "registerField": [Function],
+              "registerInnerOnSubmit": [Function],
+              "registeredFields": Object {
+                "content": Object {
+                  "count": 1,
+                  "name": "content",
+                  "type": "Field",
+                },
+                "description": Object {
+                  "count": 1,
+                  "name": "description",
+                  "type": "Field",
+                },
+                "genre": Object {
+                  "count": 1,
+                  "name": "genre",
+                  "type": "Field",
+                },
+                "readingDuration": Object {
+                  "count": 1,
+                  "name": "readingDuration",
+                  "type": "Field",
+                },
+                "title": Object {
+                  "count": 1,
+                  "name": "title",
+                  "type": "Field",
+                },
+              },
+              "reset": [Function],
+              "resetSection": [Function],
+              "sectionPrefix": undefined,
+              "setSubmitFailed": [Function],
+              "setSubmitSucceeded": [Function],
+              "shouldAsyncValidate": [Function],
+              "shouldError": [Function],
+              "shouldValidate": [Function],
+              "shouldWarn": [Function],
+              "startAsyncValidation": [Function],
+              "startSubmit": [Function],
+              "stopAsyncValidation": [Function],
+              "stopSubmit": [Function],
+              "submit": [Function],
+              "submitFailed": false,
+              "submitSucceeded": false,
+              "submitting": false,
+              "syncErrors": Object {
+                "content": "Required",
+                "description": "Required",
+                "genre": "Required",
+                "readingDuration": "Required",
+                "title": "Required",
+              },
+              "syncWarnings": Object {},
+              "touch": [Function],
+              "touchOnBlur": true,
+              "touchOnChange": false,
+              "triggerSubmit": undefined,
+              "unregister": [Function],
+              "unregisterField": [Function],
+              "untouch": [Function],
+              "updateSyncErrors": [Function],
+              "updateSyncWarnings": [Function],
+              "updateUnregisteredFields": false,
+              "valid": false,
+              "validExceptSubmit": false,
+              "validate": [Function],
+              "values": Object {},
+              "warning": undefined,
+            }
+          }
+          component="select"
+          name="genre"
+          normalize={[Function]}
+        >
+          <ConnectedField
+            _reduxForm={
+              Object {
+                "anyTouched": false,
+                "array": Object {
+                  "insert": [Function],
+                  "move": [Function],
+                  "pop": [Function],
+                  "push": [Function],
+                  "remove": [Function],
+                  "removeAll": [Function],
+                  "shift": [Function],
+                  "splice": [Function],
+                  "swap": [Function],
+                  "unshift": [Function],
+                },
+                "arrayInsert": [Function],
+                "arrayMove": [Function],
+                "arrayPop": [Function],
+                "arrayPush": [Function],
+                "arrayRemove": [Function],
+                "arrayRemoveAll": [Function],
+                "arrayShift": [Function],
+                "arraySplice": [Function],
+                "arraySwap": [Function],
+                "arrayUnshift": [Function],
+                "asyncErrors": undefined,
+                "asyncValidate": [Function],
+                "asyncValidating": false,
+                "autofill": [Function],
+                "blur": [Function],
+                "change": [Function],
+                "clearAsyncError": [Function],
+                "clearFields": [Function],
+                "clearSubmit": [Function],
+                "clearSubmitErrors": [Function],
+                "destroy": [Function],
+                "destroyOnUnmount": true,
+                "dirty": false,
+                "dispatch": [Function],
+                "enableReinitialize": false,
+                "error": undefined,
+                "fields": Array [
+                  "title",
+                  "description",
+                  "content",
+                  "genre",
+                  "image",
+                  "readingDuration",
+                ],
+                "focus": [Function],
+                "forceUnregisterOnUnmount": false,
+                "form": "contact",
+                "getFormState": [Function],
+                "getValues": [Function],
+                "initialValues": undefined,
+                "initialize": [Function],
+                "initialized": false,
+                "invalid": true,
+                "keepDirtyOnReinitialize": false,
+                "persistentSubmitErrors": false,
+                "pristine": true,
+                "pure": true,
+                "register": [Function],
+                "registerField": [Function],
+                "registerInnerOnSubmit": [Function],
+                "registeredFields": Object {
+                  "content": Object {
+                    "count": 1,
+                    "name": "content",
+                    "type": "Field",
+                  },
+                  "description": Object {
+                    "count": 1,
+                    "name": "description",
+                    "type": "Field",
+                  },
+                  "genre": Object {
+                    "count": 1,
+                    "name": "genre",
+                    "type": "Field",
+                  },
+                  "readingDuration": Object {
+                    "count": 1,
+                    "name": "readingDuration",
+                    "type": "Field",
+                  },
+                  "title": Object {
+                    "count": 1,
+                    "name": "title",
+                    "type": "Field",
+                  },
+                },
+                "reset": [Function],
+                "resetSection": [Function],
+                "sectionPrefix": undefined,
+                "setSubmitFailed": [Function],
+                "setSubmitSucceeded": [Function],
+                "shouldAsyncValidate": [Function],
+                "shouldError": [Function],
+                "shouldValidate": [Function],
+                "shouldWarn": [Function],
+                "startAsyncValidation": [Function],
+                "startSubmit": [Function],
+                "stopAsyncValidation": [Function],
+                "stopSubmit": [Function],
+                "submit": [Function],
+                "submitFailed": false,
+                "submitSucceeded": false,
+                "submitting": false,
+                "syncErrors": Object {
+                  "content": "Required",
+                  "description": "Required",
+                  "genre": "Required",
+                  "readingDuration": "Required",
+                  "title": "Required",
+                },
+                "syncWarnings": Object {},
+                "touch": [Function],
+                "touchOnBlur": true,
+                "touchOnChange": false,
+                "triggerSubmit": undefined,
+                "unregister": [Function],
+                "unregisterField": [Function],
+                "untouch": [Function],
+                "updateSyncErrors": [Function],
+                "updateSyncWarnings": [Function],
+                "updateUnregisteredFields": false,
+                "valid": false,
+                "validExceptSubmit": false,
+                "validate": [Function],
+                "values": Object {},
+                "warning": undefined,
+              }
+            }
+            asyncValidating={false}
+            component="select"
+            dirty={false}
+            dispatch={[Function]}
+            name="genre"
+            normalize={[Function]}
+            pristine={true}
+            syncError="Required"
+          >
+            <select
+              name="genre"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            >
+              <option
+                value=""
+              >
+                Select genre
+              </option>
+              <option
+                value="Tech"
+              >
+                Tech
+              </option>
+              <option
+                value="Entrepreneurship"
+              >
+                Entrepreneurship
+              </option>
+              <option
+                value="Politics"
+              >
+                Politics
+              </option>
+              <option
+                value="Design"
+              >
+                Design
+              </option>
+              <option
+                value="Popular"
+              >
+                Popular
+              </option>
+            </select>
+          </ConnectedField>
+        </Connect(ConnectedField)>
+      </Field>
+    </div>
+  </div>
+  <div
+    className="form-group"
+    id="image"
+  >
+    <ReactImageUploadComponent
+      accept="image/*"
+      buttonClassName=""
+      buttonStyles={Object {}}
+      buttonText="Choose images"
+      buttonType="submit"
+      className=""
+      errorClass=""
+      errorStyle={Object {}}
+      fileSizeError=" file size is too big"
+      fileTypeError=" is not a supported file extension"
+      imgExtension={
+        Array [
+          ".jpg",
+          ".gif",
+          ".png",
+          ".gif",
+        ]
+      }
+      label="Max file size: 5mb, accepted: jpg|gif|png"
+      labelClass=""
+      labelStyles={Object {}}
+      maxFileSize={5242880}
+      name=""
+      onChange={[Function]}
+      singleImage={false}
+      style={Object {}}
+      withIcon={true}
+      withLabel={true}
+      withPreview={false}
+    >
+      <div
+        className="fileUploader "
+        style={Object {}}
+      >
+        <div
+          className="fileContainer"
+        >
+          <img
+            alt="Upload Icon"
+            className="uploadIcon"
+            src="UploadIcon.svg"
+          />
+          <p
+            className=""
+            style={Object {}}
+          >
+            Max file size: 5mb, accepted: jpg|gif|png
+          </p>
+          <div
+            className="errorsContainer"
+          />
+          <button
+            className="chooseFileButton "
+            onClick={[Function]}
+            style={Object {}}
+            type="submit"
+          >
+            Choose images
+          </button>
+          <input
+            accept="image/*"
+            multiple="multiple"
+            name=""
+            onChange={[Function]}
+            type="file"
+          />
+        </div>
+      </div>
+    </ReactImageUploadComponent>
+  </div>
+  <div
+    className="form-group"
+    id="content"
+  >
+    <Field
+      className="form-control"
+      component={[Function]}
+      label="Content"
+      name="content"
+    >
+      <Connect(ConnectedField)
+        _reduxForm={
+          Object {
+            "anyTouched": false,
+            "array": Object {
+              "insert": [Function],
+              "move": [Function],
+              "pop": [Function],
+              "push": [Function],
+              "remove": [Function],
+              "removeAll": [Function],
+              "shift": [Function],
+              "splice": [Function],
+              "swap": [Function],
+              "unshift": [Function],
+            },
+            "arrayInsert": [Function],
+            "arrayMove": [Function],
+            "arrayPop": [Function],
+            "arrayPush": [Function],
+            "arrayRemove": [Function],
+            "arrayRemoveAll": [Function],
+            "arrayShift": [Function],
+            "arraySplice": [Function],
+            "arraySwap": [Function],
+            "arrayUnshift": [Function],
+            "asyncErrors": undefined,
+            "asyncValidate": [Function],
+            "asyncValidating": false,
+            "autofill": [Function],
+            "blur": [Function],
+            "change": [Function],
+            "clearAsyncError": [Function],
+            "clearFields": [Function],
+            "clearSubmit": [Function],
+            "clearSubmitErrors": [Function],
+            "destroy": [Function],
+            "destroyOnUnmount": true,
+            "dirty": false,
+            "dispatch": [Function],
+            "enableReinitialize": false,
+            "error": undefined,
+            "fields": Array [
+              "title",
+              "description",
+              "content",
+              "genre",
+              "image",
+              "readingDuration",
+            ],
+            "focus": [Function],
+            "forceUnregisterOnUnmount": false,
+            "form": "contact",
+            "getFormState": [Function],
+            "getValues": [Function],
+            "initialValues": undefined,
+            "initialize": [Function],
+            "initialized": false,
+            "invalid": false,
+            "keepDirtyOnReinitialize": false,
+            "persistentSubmitErrors": false,
+            "pristine": true,
+            "pure": true,
+            "register": [Function],
+            "registerField": [Function],
+            "registerInnerOnSubmit": [Function],
+            "registeredFields": undefined,
+            "reset": [Function],
+            "resetSection": [Function],
+            "sectionPrefix": undefined,
+            "setSubmitFailed": [Function],
+            "setSubmitSucceeded": [Function],
+            "shouldAsyncValidate": [Function],
+            "shouldError": [Function],
+            "shouldValidate": [Function],
+            "shouldWarn": [Function],
+            "startAsyncValidation": [Function],
+            "startSubmit": [Function],
+            "stopAsyncValidation": [Function],
+            "stopSubmit": [Function],
+            "submit": [Function],
+            "submitFailed": false,
+            "submitSucceeded": false,
+            "submitting": false,
+            "syncErrors": Object {},
+            "syncWarnings": Object {},
+            "touch": [Function],
+            "touchOnBlur": true,
+            "touchOnChange": false,
+            "triggerSubmit": undefined,
+            "unregister": [Function],
+            "unregisterField": [Function],
+            "untouch": [Function],
+            "updateSyncErrors": [Function],
+            "updateSyncWarnings": [Function],
+            "updateUnregisteredFields": false,
+            "valid": true,
+            "validExceptSubmit": true,
+            "validate": [Function],
+            "values": Object {},
+            "warning": undefined,
+          }
+        }
+        className="form-control"
+        component={[Function]}
+        label="Content"
+        name="content"
+        normalize={[Function]}
+      >
+        <ConnectedField
+          _reduxForm={
+            Object {
+              "anyTouched": false,
+              "array": Object {
+                "insert": [Function],
+                "move": [Function],
+                "pop": [Function],
+                "push": [Function],
+                "remove": [Function],
+                "removeAll": [Function],
+                "shift": [Function],
+                "splice": [Function],
+                "swap": [Function],
+                "unshift": [Function],
+              },
+              "arrayInsert": [Function],
+              "arrayMove": [Function],
+              "arrayPop": [Function],
+              "arrayPush": [Function],
+              "arrayRemove": [Function],
+              "arrayRemoveAll": [Function],
+              "arrayShift": [Function],
+              "arraySplice": [Function],
+              "arraySwap": [Function],
+              "arrayUnshift": [Function],
+              "asyncErrors": undefined,
+              "asyncValidate": [Function],
+              "asyncValidating": false,
+              "autofill": [Function],
+              "blur": [Function],
+              "change": [Function],
+              "clearAsyncError": [Function],
+              "clearFields": [Function],
+              "clearSubmit": [Function],
+              "clearSubmitErrors": [Function],
+              "destroy": [Function],
+              "destroyOnUnmount": true,
+              "dirty": false,
+              "dispatch": [Function],
+              "enableReinitialize": false,
+              "error": undefined,
+              "fields": Array [
+                "title",
+                "description",
+                "content",
+                "genre",
+                "image",
+                "readingDuration",
+              ],
+              "focus": [Function],
+              "forceUnregisterOnUnmount": false,
+              "form": "contact",
+              "getFormState": [Function],
+              "getValues": [Function],
+              "initialValues": undefined,
+              "initialize": [Function],
+              "initialized": false,
+              "invalid": false,
+              "keepDirtyOnReinitialize": false,
+              "persistentSubmitErrors": false,
+              "pristine": true,
+              "pure": true,
+              "register": [Function],
+              "registerField": [Function],
+              "registerInnerOnSubmit": [Function],
+              "registeredFields": undefined,
+              "reset": [Function],
+              "resetSection": [Function],
+              "sectionPrefix": undefined,
+              "setSubmitFailed": [Function],
+              "setSubmitSucceeded": [Function],
+              "shouldAsyncValidate": [Function],
+              "shouldError": [Function],
+              "shouldValidate": [Function],
+              "shouldWarn": [Function],
+              "startAsyncValidation": [Function],
+              "startSubmit": [Function],
+              "stopAsyncValidation": [Function],
+              "stopSubmit": [Function],
+              "submit": [Function],
+              "submitFailed": false,
+              "submitSucceeded": false,
+              "submitting": false,
+              "syncErrors": Object {},
+              "syncWarnings": Object {},
+              "touch": [Function],
+              "touchOnBlur": true,
+              "touchOnChange": false,
+              "triggerSubmit": undefined,
+              "unregister": [Function],
+              "unregisterField": [Function],
+              "untouch": [Function],
+              "updateSyncErrors": [Function],
+              "updateSyncWarnings": [Function],
+              "updateUnregisteredFields": false,
+              "valid": true,
+              "validExceptSubmit": true,
+              "validate": [Function],
+              "values": Object {},
+              "warning": undefined,
+            }
+          }
+          asyncValidating={false}
+          className="form-control"
+          component={[Function]}
+          dirty={false}
+          dispatch={[Function]}
+          label="Content"
+          name="content"
+          normalize={[Function]}
+          pristine={true}
+          syncError="Required"
+        >
+          <renderField
+            className="form-control"
+            input={
+              Object {
+                "name": "content",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "onDragStart": [Function],
+                "onDrop": [Function],
+                "onFocus": [Function],
+                "value": "",
+              }
+            }
+            label="Content"
+            meta={
+              Object {
+                "active": false,
+                "asyncValidating": false,
+                "autofilled": false,
+                "dirty": false,
+                "dispatch": [Function],
+                "error": "Required",
+                "form": "contact",
+                "initial": undefined,
+                "invalid": true,
+                "pristine": true,
+                "submitFailed": false,
+                "submitting": false,
+                "touched": false,
+                "valid": false,
+                "visited": false,
+                "warning": undefined,
+              }
+            }
+          >
+            <div>
+              <label
+                className="control-label"
+              >
+                Content
+              </label>
+              <div>
+                <input
+                  className="form-control"
+                  name="content"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onDragStart={[Function]}
+                  onDrop={[Function]}
+                  onFocus={[Function]}
+                  placeholder="Content"
+                  value=""
+                />
+              </div>
+            </div>
+          </renderField>
+        </ConnectedField>
+      </Connect(ConnectedField)>
+    </Field>
+  </div>
+  <div
+    className="form-group"
+    id="readingDuration"
+  >
+    <Field
+      className="form-control"
+      component={[Function]}
+      label="Reading duration in munites"
+      name="readingDuration"
+      placeholder="in munites"
+      type="number"
+    >
+      <Connect(ConnectedField)
+        _reduxForm={
+          Object {
+            "anyTouched": false,
+            "array": Object {
+              "insert": [Function],
+              "move": [Function],
+              "pop": [Function],
+              "push": [Function],
+              "remove": [Function],
+              "removeAll": [Function],
+              "shift": [Function],
+              "splice": [Function],
+              "swap": [Function],
+              "unshift": [Function],
+            },
+            "arrayInsert": [Function],
+            "arrayMove": [Function],
+            "arrayPop": [Function],
+            "arrayPush": [Function],
+            "arrayRemove": [Function],
+            "arrayRemoveAll": [Function],
+            "arrayShift": [Function],
+            "arraySplice": [Function],
+            "arraySwap": [Function],
+            "arrayUnshift": [Function],
+            "asyncErrors": undefined,
+            "asyncValidate": [Function],
+            "asyncValidating": false,
+            "autofill": [Function],
+            "blur": [Function],
+            "change": [Function],
+            "clearAsyncError": [Function],
+            "clearFields": [Function],
+            "clearSubmit": [Function],
+            "clearSubmitErrors": [Function],
+            "destroy": [Function],
+            "destroyOnUnmount": true,
+            "dirty": false,
+            "dispatch": [Function],
+            "enableReinitialize": false,
+            "error": undefined,
+            "fields": Array [
+              "title",
+              "description",
+              "content",
+              "genre",
+              "image",
+              "readingDuration",
+            ],
+            "focus": [Function],
+            "forceUnregisterOnUnmount": false,
+            "form": "contact",
+            "getFormState": [Function],
+            "getValues": [Function],
+            "initialValues": undefined,
+            "initialize": [Function],
+            "initialized": false,
+            "invalid": false,
+            "keepDirtyOnReinitialize": false,
+            "persistentSubmitErrors": false,
+            "pristine": true,
+            "pure": true,
+            "register": [Function],
+            "registerField": [Function],
+            "registerInnerOnSubmit": [Function],
+            "registeredFields": undefined,
+            "reset": [Function],
+            "resetSection": [Function],
+            "sectionPrefix": undefined,
+            "setSubmitFailed": [Function],
+            "setSubmitSucceeded": [Function],
+            "shouldAsyncValidate": [Function],
+            "shouldError": [Function],
+            "shouldValidate": [Function],
+            "shouldWarn": [Function],
+            "startAsyncValidation": [Function],
+            "startSubmit": [Function],
+            "stopAsyncValidation": [Function],
+            "stopSubmit": [Function],
+            "submit": [Function],
+            "submitFailed": false,
+            "submitSucceeded": false,
+            "submitting": false,
+            "syncErrors": Object {},
+            "syncWarnings": Object {},
+            "touch": [Function],
+            "touchOnBlur": true,
+            "touchOnChange": false,
+            "triggerSubmit": undefined,
+            "unregister": [Function],
+            "unregisterField": [Function],
+            "untouch": [Function],
+            "updateSyncErrors": [Function],
+            "updateSyncWarnings": [Function],
+            "updateUnregisteredFields": false,
+            "valid": true,
+            "validExceptSubmit": true,
+            "validate": [Function],
+            "values": Object {},
+            "warning": undefined,
+          }
+        }
+        className="form-control"
+        component={[Function]}
+        label="Reading duration in munites"
+        name="readingDuration"
+        normalize={[Function]}
+        placeholder="in munites"
+        type="number"
+      >
+        <ConnectedField
+          _reduxForm={
+            Object {
+              "anyTouched": false,
+              "array": Object {
+                "insert": [Function],
+                "move": [Function],
+                "pop": [Function],
+                "push": [Function],
+                "remove": [Function],
+                "removeAll": [Function],
+                "shift": [Function],
+                "splice": [Function],
+                "swap": [Function],
+                "unshift": [Function],
+              },
+              "arrayInsert": [Function],
+              "arrayMove": [Function],
+              "arrayPop": [Function],
+              "arrayPush": [Function],
+              "arrayRemove": [Function],
+              "arrayRemoveAll": [Function],
+              "arrayShift": [Function],
+              "arraySplice": [Function],
+              "arraySwap": [Function],
+              "arrayUnshift": [Function],
+              "asyncErrors": undefined,
+              "asyncValidate": [Function],
+              "asyncValidating": false,
+              "autofill": [Function],
+              "blur": [Function],
+              "change": [Function],
+              "clearAsyncError": [Function],
+              "clearFields": [Function],
+              "clearSubmit": [Function],
+              "clearSubmitErrors": [Function],
+              "destroy": [Function],
+              "destroyOnUnmount": true,
+              "dirty": false,
+              "dispatch": [Function],
+              "enableReinitialize": false,
+              "error": undefined,
+              "fields": Array [
+                "title",
+                "description",
+                "content",
+                "genre",
+                "image",
+                "readingDuration",
+              ],
+              "focus": [Function],
+              "forceUnregisterOnUnmount": false,
+              "form": "contact",
+              "getFormState": [Function],
+              "getValues": [Function],
+              "initialValues": undefined,
+              "initialize": [Function],
+              "initialized": false,
+              "invalid": false,
+              "keepDirtyOnReinitialize": false,
+              "persistentSubmitErrors": false,
+              "pristine": true,
+              "pure": true,
+              "register": [Function],
+              "registerField": [Function],
+              "registerInnerOnSubmit": [Function],
+              "registeredFields": undefined,
+              "reset": [Function],
+              "resetSection": [Function],
+              "sectionPrefix": undefined,
+              "setSubmitFailed": [Function],
+              "setSubmitSucceeded": [Function],
+              "shouldAsyncValidate": [Function],
+              "shouldError": [Function],
+              "shouldValidate": [Function],
+              "shouldWarn": [Function],
+              "startAsyncValidation": [Function],
+              "startSubmit": [Function],
+              "stopAsyncValidation": [Function],
+              "stopSubmit": [Function],
+              "submit": [Function],
+              "submitFailed": false,
+              "submitSucceeded": false,
+              "submitting": false,
+              "syncErrors": Object {},
+              "syncWarnings": Object {},
+              "touch": [Function],
+              "touchOnBlur": true,
+              "touchOnChange": false,
+              "triggerSubmit": undefined,
+              "unregister": [Function],
+              "unregisterField": [Function],
+              "untouch": [Function],
+              "updateSyncErrors": [Function],
+              "updateSyncWarnings": [Function],
+              "updateUnregisteredFields": false,
+              "valid": true,
+              "validExceptSubmit": true,
+              "validate": [Function],
+              "values": Object {},
+              "warning": undefined,
+            }
+          }
+          asyncValidating={false}
+          className="form-control"
+          component={[Function]}
+          dirty={false}
+          dispatch={[Function]}
+          label="Reading duration in munites"
+          name="readingDuration"
+          normalize={[Function]}
+          placeholder="in munites"
+          pristine={true}
+          syncError="Required"
+          type="number"
+        >
+          <renderField
+            className="form-control"
+            input={
+              Object {
+                "name": "readingDuration",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "onDragStart": [Function],
+                "onDrop": [Function],
+                "onFocus": [Function],
+                "value": "",
+              }
+            }
+            label="Reading duration in munites"
+            meta={
+              Object {
+                "active": false,
+                "asyncValidating": false,
+                "autofilled": false,
+                "dirty": false,
+                "dispatch": [Function],
+                "error": "Required",
+                "form": "contact",
+                "initial": undefined,
+                "invalid": true,
+                "pristine": true,
+                "submitFailed": false,
+                "submitting": false,
+                "touched": false,
+                "valid": false,
+                "visited": false,
+                "warning": undefined,
+              }
+            }
+            placeholder="in munites"
+            type="number"
+          >
+            <div>
+              <label
+                className="control-label"
+              >
+                Reading duration in munites
+              </label>
+              <div>
+                <input
+                  className="form-control"
+                  name="readingDuration"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onDragStart={[Function]}
+                  onDrop={[Function]}
+                  onFocus={[Function]}
+                  placeholder="Reading duration in munites"
+                  type="number"
+                  value=""
+                />
+              </div>
+            </div>
+          </renderField>
+        </ConnectedField>
+      </Connect(ConnectedField)>
+    </Field>
+  </div>
+  <div
+    className="form-group text-center"
+  >
+    <button
+      className="btn singin-button"
+      type="submit"
+    >
+      Create Blog
+    </button>
+  </div>
+</form>
+`;

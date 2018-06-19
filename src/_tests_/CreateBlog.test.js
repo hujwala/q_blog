@@ -32,7 +32,7 @@ describe("CreateBlog", () => {
   })
   it('should have form', () => {
     expect(subject.find('form').hasClass('blogForm')).toBe(true)
-    expect(subject.find('Field').length).toEqual(6);
+    expect(subject.find('Field').length).toEqual(5);
   })
 
   it('calls on submit', ()=> {

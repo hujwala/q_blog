@@ -6,9 +6,6 @@ import ImageUploader from 'react-images-upload';
 import { loginStatus } from '../../actions';
 import { connect } from 'react-redux';
 
-
-// import { DropdownButton, MenuItem, ButtonToolbar } from 'react-bootstrap';
-
 const renderField = ({ input, label, type, select, textarea, meta: { touched, error, warning } }) => (
     <div>
       <label className="control-label">{label}</label>
@@ -39,22 +36,57 @@ const validate = values => {
     return errors
   }
 
+  export const themes = {
+    light: {
+      foreground: '#000000',
+      background: '#eeeeee',
+    },
+    dark: {
+      foreground: '#ffffff',
+      background: '#222222',
+    },
+  };
+
 class CreateBlog extends Component {
+
+  constructor(props) {
+    super(props);
+    this.onDrop = this.onDrop.bind(this);
+    this.state = {
+      images: ''
+    };
+  }
+ 
+  onDrop(picture) {
+    this.setState({
+      pictures: picture
+    });
+  }
+
   submit = (values) => {
+    var base64Img = require('base64-img');
+    var images = this.state.pictures;
+    var base64Images = []
+    images.map(function(images, index){
+      base64Img.requestBase64(images.name, function(err, res, body) {
+        base64Images.push(body)
+      })
+    })
     const blog_data = {
       title: values.title,
       description: values.description,
       content: values.content,
       genre: values.genre,
-      readingDuration: values.readingDuration + "m"
+      readingDuration: values.readingDuration + "m",
+      blogImage: base64Images
     };
-    console.log(blog_data);
+    this.props.history.push('/blog_index'); 
   }
 
 
 render(){
   let { fields: {title, description, content, genre, image, readingDuration}, handleSubmit, pristine, submitting } = this.props;
-    return (
+  return (
     <div className="container">
     <div className="row mt80">
     <div className="col-md-12 col-sm-12 col-lg-12">
