@@ -40,7 +40,7 @@ class SignIn extends Component {
       userName: values.email,
       role: values.password
     };
-    fetch("http://localhost:8080/token", {
+    fetch("http://localhost:8080/loginUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +49,7 @@ class SignIn extends Component {
       body: JSON.stringify(user)
     })
     .then(function(response) {
-      return response.json();
+       return response.json();
     })
     .then(response =>{ 
         if (response.statusCode === "200") {
