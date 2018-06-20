@@ -5,7 +5,6 @@ import ReduxThunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import nock from 'nock';
 import toJson from 'enzyme-to-json';
-import renderer from 'react-test-renderer'
 // import chai, { expect } from 'chai'
 // import chaiEnzyme from 'chai-enzyme';
 import sinon from 'sinon';
