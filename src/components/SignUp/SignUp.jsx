@@ -3,7 +3,7 @@ import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { withRouter } from 'react-router-dom'
 import './SignUp.css'
-import { withAlert } from 'react-alert'
+// import { withAlert } from 'react-alert'
 
 
 
@@ -59,7 +59,7 @@ class SignUp extends Component {
       body: JSON.stringify(user)
     })
     .then(response => this.props.history.push('/blog_index'))
-    this.props.alert.show('Signed up sucessfull!!')
+    // this.props.alert.show('Signed up sucessfull!!')
          
   }
 
@@ -98,9 +98,9 @@ render(){
   }
 }
 
-export default withAlert(reduxForm({
+export default reduxForm({
   form: 'contact',
   fields: ['name', 'email', 'password' , 'confirmPassword'],
   validate
-})(SignUp));
+})(SignUp);
 
