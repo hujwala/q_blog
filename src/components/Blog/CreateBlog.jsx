@@ -5,6 +5,7 @@ import ButtonDropdown from '../DropdownButton'
 import ImageUploader from 'react-images-upload';
 import { loginStatus } from '../../actions';
 import { connect } from 'react-redux';
+import { bake_cookie, read_cookie, delete_cookie } from "sfcookies";
 
 const renderField = ({ input, label, type, select, textarea, meta: { touched, error, warning } }) => (
     <div>
@@ -67,11 +68,13 @@ class CreateBlog extends Component {
     var base64Img = require('base64-img');
     var images = this.state.pictures;
     var base64Images = []
-    images.map(function(images, index){
-      base64Img.requestBase64(images.name, function(err, res, body) {
-        base64Images.push(body)
+    if(images!=undefined){
+      images.map(function(images, index){
+        base64Img.requestBase64(images.name, function(err, res, body) {
+          base64Images.push(body)
+        })
       })
-    })
+    }
     const blog_data = {
       title: values.title,
       description: values.description,
@@ -80,7 +83,28 @@ class CreateBlog extends Component {
       readingDuration: values.readingDuration + "m",
       blogImage: base64Images
     };
-    this.props.history.push('/blog_index'); 
+    console.log(blog_data)
+    fetch("http://localhost:8080/rest/blog/2", {
+      method: "POST",
+      headers: {
+        "Authorisation": "Token " + read_cookie("auth_token"),
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin':'*'
+      },
+      body: JSON.stringify(blog_data)
+    })
+    .then(function(response) {
+       return response.json();
+    })
+    .then(response =>{ 
+        // if (response.statusCode === "200") {
+        //   this.props.history.push('/Blog_index')
+        //   this.props.alert.show(response.message)
+        // }else{
+        //   this.props.alert.show('Invalid email or password')
+        // }
+        console.log(response)
+      })
   }
 
 
