@@ -1,6 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
-import { blogDetails } from '../actions';
+import { blogDetails } from '../actions/blogFilterActions/blogIndexAction';
 import { connect } from 'react-redux';
 import { blogUpdate } from '../actions';
 import { shallow, mount, render, configure } from 'enzyme';
@@ -16,50 +16,12 @@ import * as actions from '../actions/blogFilterActions/blogIndexAction'
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import fetchMock from 'fetch-mock'
+jest.mock('../actions/blogFilterActions/blogIndexAction');
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares);
 configure({ adapter: new Adapter() });
 
-describe("blog actions", () => {
-  let details = {
-  "data":[
-    {
-    "id": 1,
-    "title": "As an Alcoholic, Your Company “Perks” are Killing Me",
-    "discription": "Dispatches from unhappy hour",
-    "content": "discription content",
-    "genre": "Tech",
-    "created_at": "2-5-2018",
-    "duration": "5"
-  },
-  {
-    "id": 2,
-    "title": "As an Alcoholic, Your Company “Perks” are Killing Me",
-    "discription": "Dispatches from unhappy hour",
-    "genre": "Entrepreneurship",
-    "content": "discription content",
-    "created_at": "2-5-2018",
-    "duration": "10"
-  }]
-}
-
-  afterEach(() => {
-    fetchMock.reset()
-    fetchMock.restore()
-  })
-
-
-  // it('should create an action to add a blogDetails', () => {
-  //   fetchMock
-  //     .getOnce('http://localhost:3000/example.json', { body: { data: [details] }, headers: { 'content-type': 'application/json' }})
-  //   const expectedActions = { type: types.BLOG_DETAILS, body: { data: [details] }}
-  //   const store = mockStore({ data: [] });
-  //   return store.dispatch(actions.blogDetails()).then(() => {
-  //     expect(store.getActions()).toEqual(expectedActions)
-  //   })
-  // })
-
-
+describe("should call blog reducers", () => {
   it('should return initial value', () => {
     let details = 'details'
     let data = {}
