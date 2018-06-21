@@ -31,7 +31,13 @@
     "sinon": "^6.0.0"
   },
   "devDependencies": {
-    "react-scripts": "1.1.4"
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-15": "^1.0.5",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^23.1.0",
+    "jest-enzyme": "^6.0.1",
+    "react-scripts": "1.1.4",
+    "redux-mock-store": "^1.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
