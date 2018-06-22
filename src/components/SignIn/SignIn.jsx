@@ -51,7 +51,7 @@ class SignIn extends Component {
     .then(response =>{ 
         if (response.statusCode === "200") {
           bake_cookie("auth_token", response.authToken);
-          this.props.history.push('/Blog_index')
+          this.props.history.push('/blog_index')
           this.props.alert.show(response.message)
         }else{
           this.props.alert.show('Invalid email or password')
