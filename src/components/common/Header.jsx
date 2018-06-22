@@ -28,7 +28,7 @@ class Header extends React.Component {
         <Link to='/' className="navbar-brand">Q Blog</Link>
         {read_cookie("auth_token").length != 0 ? 
           <div>
-            { window.location.pathname == "/Blog_index" &&
+            { window.location.pathname == "/blog_index" &&
               <input className="search" type="search" placeholder="Search" onChange={e => this.filterList(e)} />
             }
           <Link to='' className="btn btn-outline-success my-2 my-sm-0" onClick={this.logOut}>LogOut</Link>
