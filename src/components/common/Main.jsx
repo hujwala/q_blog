@@ -7,6 +7,7 @@ import Home from './Home';
 import index from '../Blog/BlogIndex'
 import CreateBlog from '../Blog/CreateBlog'
 import PageNotFound from './PageNotFound.jsx';
+import ShowProfile from '../profile/ShowProfile'
 import { bake_cookie, read_cookie } from "sfcookies";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -32,6 +33,7 @@ class Main extends React.Component {
         <Route exact path='/sign_in' component={SignIn} />
         <PrivateRoute exact path="/Blog_index" component={index} />
         <PrivateRoute exact path='/create_blog'  component={CreateBlog} />
+        <Route  exact path="/showProfile" component={ShowProfile} ></Route>
         <Route path="*" component={PageNotFound} />
       </Switch>
     )

@@ -5,9 +5,9 @@ export const blogDetails = () => {
   return (dispatch) => {
     var details = 'details';
     fetch('http://localhost:8080/rest/blogs',{
-      method: "GET",
+      method: "PUT",
       headers: {
-        "Authorisation": "Token " + read_cookie("auth_token"),
+        "authorization": "Bearer " + read_cookie("auth_token"),
         "Content-Type": "application/json",
         'Access-Control-Allow-Origin':'*'
       }
