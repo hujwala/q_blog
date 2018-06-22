@@ -31,9 +31,9 @@ class Main extends React.Component {
         <Route exact path='/' component={Home}/>
         <Route exact path='/sign_up' component={SignUp} />
         <Route exact path='/sign_in' component={SignIn} />
-        <PrivateRoute exact path="/Blog_index" component={index} />
+        <PrivateRoute exact path="/blog_index" component={index} />
         <PrivateRoute exact path='/create_blog'  component={CreateBlog} />
-        <Route  exact path="/showProfile" component={ShowProfile} ></Route>
+        <Route  exact path="/show_profile" component={ShowProfile} ></Route>
         <Route path="*" component={PageNotFound} />
       </Switch>
     )
