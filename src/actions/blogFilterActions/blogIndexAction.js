@@ -3,7 +3,6 @@ import { bake_cookie, read_cookie, delete_cookie } from "sfcookies";
 
 export const blogDetails = () => {
   return (dispatch) => {
-    var details = 'details';
     fetch('http://localhost:8080/rest/blogs',{
       method: "PUT",
       headers: {
@@ -16,8 +15,7 @@ export const blogDetails = () => {
       return response.json();
     })
     .then((responseJson) => {
-      let data = responseJson
-      dispatch({type: BLOG_DETAILS, payload: {details, data}})
+       dispatch({type: BLOG_DETAILS, payload: responseJson })
     })
   }
 }

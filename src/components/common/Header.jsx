@@ -21,23 +21,24 @@ class Header extends React.Component {
     delete_cookie("auth_token")
     this.props.history.push('/')
   }
-
   render()
   {
     return (
       <nav className="navbar navbar-dark bg-dark justify-content-between">
         <Link to='/' className="navbar-brand">Q Blog</Link>
         {read_cookie("auth_token").length != 0 ? 
-        <div>
-        <input className="search" type="search" placeholder="Search" onChange={e => this.filterList(e)} />
-        <Link to='' className="btn btn-outline-success my-2 my-sm-0" onClick={this.logOut}>LogOut</Link>
-        </div>
-        :
-        <form className="form-inline">
-          <Link to='/sign_up' className="btn btn-outline-success my-2 my-sm-0">SignUp</Link>&emsp;
-          <Link to='/sign_in' className="btn btn-outline-success my-2 my-sm-0"> SignIn</Link>
-        </form>
-      }
+          <div>
+            { window.location.pathname == "/Blog_index" &&
+              <input className="search" type="search" placeholder="Search" onChange={e => this.filterList(e)} />
+            }
+          <Link to='' className="btn btn-outline-success my-2 my-sm-0" onClick={this.logOut}>LogOut</Link>
+          </div>
+          :
+          <form className="form-inline">
+            <Link to='/sign_up' className="btn btn-outline-success my-2 my-sm-0">SignUp</Link>&emsp;
+            <Link to='/sign_in' className="btn btn-outline-success my-2 my-sm-0"> SignIn</Link>
+          </form>
+        }
       </nav>
     )
   }

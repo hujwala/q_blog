@@ -6,6 +6,7 @@ import SignIn from '../SignIn/SignIn';
 import Home from './Home';
 import index from '../Blog/BlogIndex'
 import CreateBlog from '../Blog/CreateBlog'
+import EditBlog from '../Blog/EditBlog'
 import PageNotFound from './PageNotFound.jsx';
 import ShowProfile from '../profile/ShowProfile'
 import { bake_cookie, read_cookie } from "sfcookies";
@@ -33,7 +34,8 @@ class Main extends React.Component {
         <Route exact path='/sign_in' component={SignIn} />
         <PrivateRoute exact path="/blog_index" component={index} />
         <PrivateRoute exact path='/create_blog'  component={CreateBlog} />
-        <Route  exact path="/show_profile" component={ShowProfile} ></Route>
+        <PrivateRoute exact path="/show_profile" component={ShowProfile} />
+        <PrivateRoute exact path='/edit_blog'  component={EditBlog} />
         <Route path="*" component={PageNotFound} />
       </Switch>
     )

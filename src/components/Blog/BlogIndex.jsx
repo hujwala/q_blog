@@ -19,26 +19,26 @@ class BlogIndex extends Component {
             <h4 className="blog_name"> Blog </h4>
           </div>
         </div>
-        { this.props.details.data ? 
-          this.props.details.data.map(data => {
+        { this.props.details ? 
+          this.props.details.map(data => {
             return (
               <div className="row" key={data.id}>
-              <div className="col-md-8">
-              <div className="blog_title">{data.title} </div>
-              <div className="blog_discription">{data.discription}</div>
-              <div className="blog_content"> {data.content} </div>
-              <div className="genre"> {data.genre} </div>
-              <div className="blog_duration">{data.created_at} <span> * </span> {data.duration}m </div>
+                <div className="col-md-8">
+                  <div className="blog_title">{data.title} </div>
+                  <div className="blog_discription">{data.discription}</div>
+                  <div className="blog_content"> {data.content} </div>
+                  <div className="genre"> {data.genre} </div>
+                  <div className="blog_duration">{data.created_at} <span> * </span> {data.readingDuration} </div>
+                </div>
+                <div className="col-md-4"> 
+                  <img src={require("../../image/blog.jpg")} alt="boohoo" className="img-responsive" className="blog_image"/>
+                </div>
               </div>
-              <div className="col-md-4"> 
-              <img src={require("../../image/blog.jpg")} alt="boohoo" className="img-responsive" className="blog_image"/>
-              </div>
-        </div>
             )
           })
         : null }
       </div>
-      ); 
+      )
   }
 }
 
