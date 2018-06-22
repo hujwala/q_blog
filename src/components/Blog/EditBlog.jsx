@@ -1,7 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
-import ButtonDropdown from '../DropdownButton'
 import ImageUploader from 'react-images-upload';
 import { loginStatus } from '../../actions';
 import { connect } from 'react-redux';
@@ -48,7 +47,7 @@ const validate = values => {
     },
   };
 
-class CreateBlog extends Component {
+class EditBlog extends Component {
 
   constructor(props) {
     super(props);
@@ -85,7 +84,7 @@ class CreateBlog extends Component {
     };
     console.log(blog_data)
     fetch("http://localhost:8080/rest/blog/2", {
-      method: "POST",
+      method: "GET",
       headers: {
         "Authorisation": "Token " + read_cookie("auth_token"),
         "Content-Type": "application/json",
@@ -97,12 +96,6 @@ class CreateBlog extends Component {
        return response.json();
     })
     .then(response =>{ 
-        // if (response.statusCode === "200") {
-        //   this.props.history.push('/Blog_index')
-        //   this.props.alert.show(response.message)
-        // }else{
-        //   this.props.alert.show('Invalid email or password')
-        // }
         console.log(response)
       })
   }
@@ -151,7 +144,7 @@ render(){
               <Field name="readingDuration" component={renderField} type="number" label="Reading duration in munites" placeholder="in munites" {...readingDuration} className="form-control"/>
             </div>
             <div className="form-group text-center">
-              <button type="submit" className="btn singin-button">Create Blog</button>
+              <button type="submit" className="btn singin-button">Update Blog</button>
             </div>
           </form>
         </div>
@@ -164,4 +157,4 @@ export default reduxForm({
   form: 'contact',
   fields: ['title', 'description', 'content', 'genre', 'image', 'readingDuration'],
   validate
-})(CreateBlog);
+})(EditBlog);
