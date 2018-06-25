@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch(action.type){
     case PROFILE_DETAILS: 
-      return {...state, [action.payload.details]:action.payload.data};
+      return {...state, profile_details: action.payload};
     default :
       return state;
   }

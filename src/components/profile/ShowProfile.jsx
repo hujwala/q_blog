@@ -11,16 +11,16 @@ class ShowProfile extends Component {
 
   render() {
     return (
-  <div className = "container">
-    <div className = "row ">
-      <div>
+      <div className = "container">
+        <div className = "row ">
+        <div>
         <span> Email
-          <input type = "text"/>
-            <button onClick={() => this.profileUpdate()}>Edit</button>
-            <button>Save</button>
-      </span>
+          <input type = "text" value = {this.props.profile_details.email}/>
+          <button onClick={() => this.profileUpdate()}>Edit</button>
+          <button>Save</button>
+        </span>
         </div>
-       </div>
+        </div>
       </div>  
       )
   }

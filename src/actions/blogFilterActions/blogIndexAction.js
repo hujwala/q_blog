@@ -3,7 +3,7 @@ import { bake_cookie, read_cookie, delete_cookie } from "sfcookies";
 
 export const blogDetails = () => {
   return (dispatch) => {
-    fetch('http://localhost:8080/rest/blogs',{
+    fetch('http://localhost:8080/blogs',{
       method: "GET",
       headers: {
         "Authorisation": "Token " + read_cookie("auth_token"),
